@@ -1,0 +1,37 @@
+{
+  "type": "module",
+  "name": "hackerbay_api",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "husky": "^4.3.0",
+    "jsonpatch": "^3.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^8.2.1",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.2.0",
+    "request": "^2.88.2",
+    "sharp": "^0.26.3"
+  },
+  "scripts": {
+    "start": "nodemon src/app.js",
+    "format": "prettier --write .",
+    "test": "mocha ./src/tests/index.js --timeout=20000 --exit"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format"
+    }
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
+}
